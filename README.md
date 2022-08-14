@@ -3,6 +3,18 @@
 This is <b>fun with plots</b> where we experiment with data and visualizations in rust.
 For example the weather data, a popular forecast data source, which is hard to predict and deviates the more days ahead of the reference date.
 
+Below are visualizations of weather data
+
+<img src="./plots/CH__8001/forecast_relative_animation.gif" width="500" height="500" />
+<img src="./plots/CH__8001/forecast_animation.gif" width="500" height="500" />
+
+
+![Forecasts absolute](./plots/CH__8001/daily_forecast_curves.png)
+![Forecasts absolute](./plots/CH__8001/relative_percentile_curves.png)
+![Forecasts absolute](./plots/CH__8001/daily_percentile_curves.png)
+
+
+
 ## Disclaimer
 
 This is a <i>fun</i> project with many open todo's and possible improvements, i.e. due to lack of time many parts are simple and not meant for any productive setup.
