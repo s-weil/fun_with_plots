@@ -25,7 +25,7 @@ You need to run the app on a daily basis for several days in oder to gather the 
 ## Setup
 
 Rename the `.env_exampe` file to `.env` and paste in your API Key from weatherbit.io.
-Also adjust the `country` and `zip` code in the `main` function. 
+Also adjust the `country` and `zip` code in the `config.toml` file. 
 
 ### TODOs and ideas
 
