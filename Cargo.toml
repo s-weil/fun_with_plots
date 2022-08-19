@@ -1,5 +1,5 @@
 [package]
-name = "graph-wiggler"
+name = "fun_with_plots"
 version = "0.1.0"
 edition = "2021"
 author = "snusnusnu (aka Steffen)"

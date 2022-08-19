@@ -118,7 +118,7 @@ pub fn plot_level_curves(
             .name(&format!("Level {}%", level))
             .marker(
                 Marker::new()
-                    .color(Rgb::new(3 * (*level as u8), 64, 82))
+                    .color(Rgb::new(2 * (*level as u8), 0, 0))
                     .size(12),
             );
         plot.add_trace(trace);

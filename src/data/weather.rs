@@ -131,10 +131,10 @@ pub mod utils {
             .for_each(|(_, vs)| vs.sort_by(|a, b| a.partial_cmp(b).unwrap()));
 
         // TODO: do only the levels 20,40,60,80 for now until more data is available
-        let max_idx = 5;
+        let max_idx = 9;
         let mut level_map = HashMap::new();
 
-        for level in (20..=80).step_by(20) {
+        for level in (10..=90).step_by(10) {
             let mut level_curve = Vec::new();
             for (duration, vs) in grouped_by_d.iter() {
                 if vs.len() >= max_idx {
