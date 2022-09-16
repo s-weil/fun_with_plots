@@ -1,11 +1,12 @@
+use std::collections::HashMap;
+
+use crate::data::models::{TimeSeries, TimeSeriesPoint};
 use plotly::common::{DashType, Line, Marker, Mode, Title};
 use plotly::layout::{
     Axis, Layout, Legend, RangeSelector, RangeSlider, SelectorButton, SelectorStep, StepMode,
     TicksDirection,
 };
 use plotly::{Plot, Rgb, Scatter};
-
-use crate::model::{TimeSeries, TimeSeriesPoint};
 
 fn unzip(time_series: &[TimeSeriesPoint]) -> (Vec<String>, Vec<f32>) {
     let mut dates = Vec::new();
@@ -105,9 +106,7 @@ fn unzip_level_curve(curve: &[(chrono::Duration, f32)]) -> (Vec<f32>, Vec<f32>) 
     (days_ahead, values)
 }
 
-pub fn plot_level_curves(
-    curve_by_level: &std::collections::HashMap<usize, Vec<(chrono::Duration, f32)>>,
-) {
+pub fn plot_level_curves(curve_by_level: &HashMap<usize, Vec<(chrono::Duration, f32)>>) {
     let layout = Layout::new().title(Title::new("Percentile Level curves"));
     let mut plot = Plot::new();
 
@@ -118,9 +117,26 @@ pub fn plot_level_curves(
             .name(&format!("Level {}%", level))
             .marker(
                 Marker::new()
-                    .color(Rgb::new(2 * (*level as u8), 0, 0))
+                    .color(Rgb::new(3 * (*level as u8), 64, 82))
                     .size(12),
             );
+        plot.add_trace(trace);
+    }
+
+    plot.set_layout(layout);
+    plot.show();
+    println!("{}", plot.to_inline_html(Some("line_and_scatter_styling")));
+}
+
+pub fn plot_metric_curves(base_cuve: &Vec<f32>, metric_curves: &HashMap<&str, Vec<f32>>) {
+    let layout = Layout::new().title(Title::new("Metric curves"));
+    let mut plot = Plot::new();
+
+    for (metric_name, metric_curve) in metric_curves.iter() {
+        let trace = Scatter::new(base_cuve.clone(), metric_curve.clone())
+            .mode(Mode::LinesMarkers)
+            .name(metric_name);
+
         plot.add_trace(trace);
     }
 
