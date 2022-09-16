@@ -1,4 +1,4 @@
-use crate::model::TimeSeriesPoint;
+use crate::data::models::TimeSeriesPoint;
 use chrono::{Date, Utc};
 use plotters::prelude::*;
 use std::collections::HashMap;

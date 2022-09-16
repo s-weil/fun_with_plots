@@ -13,3 +13,6 @@ Cargo.lock
 
 # weather data is licensed to weatherbit.io
 data/weather/*
+# football data is licensed to https://v3.football.api-sports.io
+data/football/*
+python/json/*

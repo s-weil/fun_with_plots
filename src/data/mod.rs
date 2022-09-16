@@ -1,9 +1,8 @@
 mod data_provider;
-mod weather;
+pub mod football;
+pub mod models;
+pub mod weather;
 
-pub use data_provider::DataProvider;
-pub use weather::utils::{
-    convert_weather_responses, create_temperature_timeseries, percentile_timeseries, percentiles,
-    reference_timeseries,
-};
+pub use data_provider::{DataProvider, FootballProvider, WeatherProvider};
+pub use football::FootballLeague;
 pub use weather::WeatherLocation;
