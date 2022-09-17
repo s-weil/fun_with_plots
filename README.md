@@ -16,8 +16,14 @@ Below are visualizations of weather data
 ![Forecasts absolute](./plots/CH__8001/daily_percentile_curves.png)
 
 
-Below are visualizations of football data
-TODO
+Below are visualizations of the football data 
+
+Ronaldo<br>
+![Forecasts absolute](./plots/spain/ronaldo.png)<br>
+Messi<br>
+![Forecasts absolute](./plots/spain/messi.png)<br>
+Ronaldo and Messi per season (GPM - goals per minute,, scaled by 100.0; PPM - passes per minute)<br>
+![Forecasts absolute](./plots/spain/Ronaldo_vs_Messi.png)
 
 ## Disclaimer
 
