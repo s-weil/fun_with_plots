@@ -3,8 +3,8 @@
 This is <b>fun with plots</b> where we experiment with data and visualizations in rust.
 For example the 
 
-- weather data, a popular data source for forecasts and which are hard to predict and deviate the more days ahead of the reference date
-- football metrics which compares stats and metrics of several players
+- weather data, a popular data source for forecasts which are hard to predict the more days ahead of the reference date
+- football metrics which compare stats and metrics of several players
 
 Below are visualizations of weather data
 
@@ -22,7 +22,7 @@ Ronaldo<br>
 ![Forecasts absolute](./plots/spain/ronaldo.png)<br>
 Messi<br>
 ![Forecasts absolute](./plots/spain/messi.png)<br>
-Ronaldo and Messi per season (GPM - goals per minute,, scaled by 100.0; PPM - passes per minute)<br>
+Ronaldo and Messi per season (GPM - goals per minute, scaled by 100.0; PPM - passes per minute)<br>
 ![Forecasts absolute](./plots/spain/Ronaldo_vs_Messi.png)
 
 ## Disclaimer
